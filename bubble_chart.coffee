@@ -43,6 +43,6 @@ class Dashing.BubbleChart extends Dashing.Widget
     # Load new values and update chart
     if @myChart
       if data.datasets then @myChart.data.datasets = data.datasets
-      if data.options then @myChart.options = $.extend(data.options, @myChart.options)
+      if data.options then $.extend(@myChart.options, data.options)
 
       @myChart.update()
